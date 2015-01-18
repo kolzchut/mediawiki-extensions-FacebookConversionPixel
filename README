@@ -1,0 +1,14 @@
+Extension:FacebookConversionPixel
+=====================================
+
+All the extension does is add the Facebook Custom Audience (or Conversion) Pixel code.
+It only has a single configuration option - your pixel id:
+	$egFacebookPixelId = '123456789098765';
+
+Description by Facebook:
+Custom Audiences from your Website allows you to target your
+Facebook ads to audiences of people who have visited your website
+and remarket to people who have expressed interest in your products.
+
+See more here:
+https://developers.facebook.com/docs/ads-for-websites/website-custom-audiences/getting-started
