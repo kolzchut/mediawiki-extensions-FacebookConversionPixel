@@ -49,12 +49,12 @@ var s = document.getElementsByTagName('script')[0];
 s.parentNode.insertBefore(fbds, s);
 _fbq.loaded = true;
 }
-_fbq.push(['addPixelId', '{$$egFacebookConversionPixelId}']);
+_fbq.push(['addPixelId', '{$egFacebookConversionPixelId}']);
 })();
 window._fbq = window._fbq || [];
 window._fbq.push(['track', 'PixelInitialized', {}]);
 </script>
-<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id={$$egFacebookConversionPixelId}&amp;ev=PixelInitialized" /></noscript>‬
+<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id={$egFacebookConversionPixelId}&amp;ev=PixelInitialized" /></noscript>‬
 SCRIPT;
 
 		return $script;
