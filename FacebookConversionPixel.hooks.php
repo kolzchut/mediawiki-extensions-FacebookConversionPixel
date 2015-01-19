@@ -10,14 +10,14 @@ class FacebookConversionPixelHooks {
 	public static function onSkinAfterBottomScripts( $skin, &$text ) {
 		// Run this only if it's a low (/regular) priority
 		if( !self::isHighPriority() ) {
-			$text .= self::getFbPixelScript();
+			$text .= self::getFbPixelScript( $skin );
 		};
 	}
 
 	public static function onBeforePageDisplay( OutputPage &$out, Skin &$skin ) {
 		// Run this only if it's a high priority
 		if( self::isHighPriority() ) {
-			$out->addHeadItem( 'FacebookConversionPixel', self::getFbPixelScript() );
+			$out->addHeadItem( 'FacebookConversionPixel', self::getFbPixelScript( $skin ) );
 		}
 	}
 
@@ -27,11 +27,15 @@ class FacebookConversionPixelHooks {
 	}
 
 
-	private static function getFbPixelScript() {
+	private static function getFbPixelScript( Skin $skin ) {
 		global $egFacebookConversionPixelId;
 
 		if( empty( $egFacebookConversionPixelId ) ) {
 			throw new MWException( "You must set \$egFacebookConversionPixelId to the Pixel ID supplied by Facebook" );
+		}
+
+		if ( $skin->getUser()->isAllowed( 'noanalytics' ) ) {
+			return "\n<!-- Facebook Conversion Pixel tracking is disabled for this user -->\n";
 		}
 
 		$script = <<< SCRIPT

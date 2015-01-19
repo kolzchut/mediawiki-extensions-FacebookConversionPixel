@@ -8,29 +8,29 @@
  * @license GNU General Public Licence 2.0 or later
  */
 
-$globals['wgExtensionCredits']['other'][] = array(
-	'path' => __FILE__,
+$GLOBALS['wgExtensionCredits']['other'][] = array(
 	'name' => 'FacebookConversionPixel',
 	'author' => array(
 		'Dror S. for [http://www.kolzchut.org.il Kol-Zchut]',
 	),
 	'version'  => '0.1.0',
-	//'url' => 'https://www.mediawiki.org/wiki/Extension:FacebookConversionPixel',
+	'license-name' => 'GPL-2.0+',
 	'descriptionmsg' => 'facebookconversionpixel-desc',
+	'path' => __FILE__
 );
 
 /* Setup */
 
 // Register files
-$globals['wgAutoloadClasses']['FacebookConversionPixelHooks'] = __DIR__ . '/FacebookConversionPixel.hooks.php';
-$globals['$wgMessagesDirs']['FacebookConversionPixel'] = __DIR__ . '/i18n';
+$GLOBALS['wgAutoloadClasses']['FacebookConversionPixelHooks'] = __DIR__ . '/FacebookConversionPixel.hooks.php';
+$GLOBALS['wgMessagesDirs']['FacebookConversionPixel'] = __DIR__ . '/i18n';
 
 
 // Hooks
-$globals['wgHooks']['SkinAfterBottomScripts'][] = 'FacebookConversionPixelHooks::onSkinAfterBottomScripts';
-$globals['wgHooks']['BeforePageDisplay'][]  = 'FacebookConversionPixelHooks:onBeforePageDisplay';
+$GLOBALS['wgHooks']['SkinAfterBottomScripts'][] = 'FacebookConversionPixelHooks::onSkinAfterBottomScripts';
+$GLOBALS['wgHooks']['BeforePageDisplay'][]  = 'FacebookConversionPixelHooks::onBeforePageDisplay';
 
 
 /* Configuration */
-$globals['egFacebookConversionPixelId'] = null;
-$globals['egFacebookConversionPixelHighPriority'] = false; // Place script in top or bottom
+$GLOBALS['egFacebookConversionPixelId'] = null;
+$GLOBALS['egFacebookConversionPixelHighPriority'] = false; // Place script in top or bottom

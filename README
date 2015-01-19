@@ -1,14 +1,23 @@
-Extension:FacebookConversionPixel
-=====================================
+FacebookConversionPixel extension for MediaWiki
+===============================================
 
-All the extension does is add the Facebook Custom Audience (or Conversion) Pixel code.
-It only has a single configuration option - your pixel id:
-	$egFacebookPixelId = '123456789098765';
+This MediaWiki extension does one simple thing: add the
+Facebook Custom Audience (or Conversion) Pixel code.
 
-Description by Facebook:
-Custom Audiences from your Website allows you to target your
-Facebook ads to audiences of people who have visited your website
-and remarket to people who have expressed interest in your products.
+It only has one mandatory and one optional configuration options:
+
+* Mandatory - Your pixel ID: `$egFacebookPixelId           = '123456789098765';`
+* Optional - set to true to run script in <head>: `$egFacebookPixelHighPriority = false;`
+
+Facebook's description of Custom Audiences:
+> Custom Audiences from your Website allows you to target your
+> Facebook ads to audiences of people who have visited your website
+> and remarket to people who have expressed interest in your products.
 
 See more here:
-https://developers.facebook.com/docs/ads-for-websites/website-custom-audiences/getting-started
+[Facebook documentation](https://developers.facebook.com/docs/ads-for-websites/website-custom-audiences/getting-started)
+
+## Changelog ##
+
+### 0.1.0, 18-Jan-2015 ###
+Initial release
