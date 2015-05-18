@@ -4,14 +4,15 @@
  **
  * @file
  * @ingroup Extensions
- * @author Dror S., 2015
+ * @author Dror S. [FFS]
+ * @copyright © 2015 Dror S. & Kol-Zchut Ltd.
  * @license GNU General Public Licence 2.0 or later
  */
 
 $GLOBALS['wgExtensionCredits']['other'][] = array(
 	'name' => 'FacebookConversionPixel',
 	'author' => array(
-		'Dror S. for [http://www.kolzchut.org.il Kol-Zchut]',
+		'Dror S. [FFS] ([http://www.kolzchut.org.il Kol-Zchut])',
 	),
 	'version'  => '0.1.0',
 	'license-name' => 'GPL-2.0+',
