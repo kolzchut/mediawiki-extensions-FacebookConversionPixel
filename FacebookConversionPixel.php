@@ -16,6 +16,7 @@ $GLOBALS['wgExtensionCredits']['other'][] = array(
 	),
 	'version'  => '0.1.0',
 	'license-name' => 'GPL-2.0+',
+	'url' => 'https://github.com/kolzchut/mediawiki-extensions-FacebookConversionPixel',
 	'descriptionmsg' => 'facebookconversionpixel-desc',
 	'path' => __FILE__
 );
